@@ -168,13 +168,15 @@
 			margin-bottom: 8px;
 			padding-left: 28px;
 			color: #1F4F82;
-			text-decoration: none;
 			float: left;
 		}
 		.content-articles-headline-text a:visited {
 			color: #3973ac;
 		}
-		.content-articles-headline-text a:hover {
+		a {
+			text-decoration: none;
+		}
+		a:hover {
 			text-decoration: underline;
 		}
 		.video-link {
@@ -197,6 +199,7 @@
 		#content-sidebar-watch {
 			background-color: #EEEEEE;
 			width: 330px;
+			height: 100%;
 			position: relative;
 			top: -20px;
 		}
@@ -215,13 +218,42 @@
 		#slides {
 			padding-left: 4px;
 		}
+		#slides img {
+			padding: 0;
+			margin: 0;
+		}
 		.img-watch {
-			padding: 0 0 10px 0;
+			padding: 0;
 			margin: 0;
 			height: 115px;
 		}
-
-
+		#live-list {
+			padding: 0;
+			margin: 0;
+		}
+		#live-list ul {
+			padding: 0;
+			margin: 0;
+		}
+		#live-list li {
+			list-style: none;
+			background-image: url("images/live.png");
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 28px;
+			margin: 0 8px 0 8px;
+			padding: 8px 0 8px 35px;
+			font-weight: bold;
+		}
+		#live-list a {
+			color: #1F4F82;
+		}
+		#live-list a:visited {
+			color: #3973ac;
+		}
+		.bb {
+			border-bottom: 1px solid #DDDDDD;
+		}
 
 
 
@@ -329,12 +361,16 @@
 						<div class = "break"></div>
 
 						<div id="slides">
-							<img class="img-watch" src="images/left.png">
-							<img class="img-watch" src="images/watch1.png">
-							<img class="img-watch" src="images/watch2.png">
-							<img class="img-watch" src="images/right.png">
+							<img class="img-watch" src="images/left.png" />
+							<img class="img-watch" src="images/watch1.png" />
+							<img class="img-watch" src="images/watch2.png" />
+							<img class="img-watch" src="images/right.png" />
 						</div>
 
+						<ul id = "live-list">
+							<li class="bb"><a href="http://web.archive.org/web/20140402131524/http://www.bbc.co.uk/news/10318089">BBC News Channel</a></li>
+							<li><a href="http://web.archive.org/web/20140402131524/http://www.bbc.co.uk/radio">Radio Live</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
