@@ -1,0 +1,246 @@
+		body {
+			margin: 0;
+			font-family: arial, helvetica, verdana, sans-serif;
+		}
+		#top-bar {
+			background-color: #7A0000;
+			width: 100%;
+			height: 40px;
+			color: white;
+		}
+		.fixed-width {
+			width: 1000px;
+			margin: 0 auto;
+		}
+		#top-logo {
+			padding-top: 4px;
+			padding-right: 8px;
+			float: left;
+			border-right: 1px solid #990000;
+		}
+		#top-sign-in {
+			font-weight: bold;
+			font-size: 0.8em;
+			width: 100px;
+			height: 100%;
+			padding: 4px 20px 13px 20px;
+			float: left;
+			border-right: 1px solid #990000;
+		}
+		#top-sign-in img {
+			position: relative;
+			top: 5px;
+		}
+		#top-menu {
+			float: left;
+			padding: 0;
+			margin-left: 10;
+		}
+		#top-menu ul {
+			padding: 0;
+			margin: 0;
+		}
+		#top-menu li {
+			list-style: none;
+			font-weight: bold;
+			font-size: 0.8em;
+			height: 100%;
+			padding: 12px 20px 12px 20px;
+			border-right: 1px solid #990000;
+			float: left;
+		}
+		#top-search {
+			float: left;
+			padding: 8px;
+			border: none;
+			font-size: 0.8em;
+		}
+		#top-search input {
+			height: 17px;
+			width: 140px;
+			font-size: 0.9em;
+			padding-left: 5px;
+			background-image: url("images/magnify.png");
+			background-repeat: no-repeat;
+			background-position: right 2px center;
+			background-size: 10%;
+		}
+
+		.break {
+			clear: both;
+		}
+
+		#news-bar {
+			background-color: #990000;
+			width: 100%;
+			height: 78px;
+			color: white;
+		}
+		#news-bar p {
+			margin: 0;
+			position: relative;
+		}
+		#news-header {
+			padding-top: 4px;
+			font-size: 2.7em;
+			float: left;
+		}
+		#uk {
+			font-size: 0.65em;
+			padding-left: 20px;
+		}
+		#rss {
+			float: right;
+			padding-right: 40px;
+			padding-top: 30px;
+			font-size: 0.8em;
+		}
+		#rss img {
+			height: 11px;
+		}
+		#news-menu {
+			float: left;
+			padding: 0;
+			left: -10;
+			background-color: #4d0000;
+			height: 25px;
+		}
+		#news-menu ul {
+			padding: 5px 0 5px 0;
+			margin: 0;
+		}
+		#news-menu li {
+			list-style: none;
+			font-size: 0.75em;
+			padding: 0 8px 0 8px;
+			border-right: 0.5px solid #602020;
+			float: left;
+			font-weight: bold;
+		}
+		.news-selected {
+			background-color: #e6e6e6;
+			color: #333333;
+			height: 20px;
+			position: relative;
+			top: -5px;
+			padding-top: 5px !important;
+		}
+
+		#content {
+			width: 100%;
+			color: #535353;
+			font-size: 0.8em;
+		}
+		#content-articles {
+			width: 650px;
+			float: left;
+		}
+		h1 {
+			color: #1F4F82;
+			font-size: 2.5em;
+			margin-top: 0;
+		}
+		.content-articles-headline-image {
+			float: left;
+		}
+		.content-articles-headline-text {
+			float: left;
+			position: relative;
+			left: 15px;
+			width: 220px;
+			top: -15px;
+		}
+		.content-articles-headline-text img {
+			height: 12px;
+			padding-top: 6px;
+		}
+		.content-articles-headline-text a {
+			margin-bottom: 8px;
+			padding-left: 28px;
+			color: #1F4F82;
+			float: left;
+		}
+		.content-articles-headline-text a:visited {
+			color: #3973ac;
+		}
+		a {
+			text-decoration: none;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.video-link {
+			background-image: url("images/vid-link.png");
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 20px;
+		}
+		.audio-link {
+			background-image: url("images/audio-link.png");
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 20px;
+		}
+
+		#content-sidebar {
+			float: right;
+			width: 350px;
+		}
+		#content-sidebar-watch {
+			background-color: #EEEEEE;
+			width: 330px;
+			height: 100%;
+			position: relative;
+			top: -20px;
+		}
+		h2 {
+			color: #505050;
+			padding: 10px 0 10px 10px;
+			margin: 0;
+			font-size: 1.8em;
+			float: left;
+		}
+		#img-boxes {
+			float: right;
+			height: 10px;
+			padding: 20px 10px 0 0;
+		}
+		#slides {
+			padding-left: 4px;
+		}
+		#slides img {
+			padding: 0;
+			margin: 0;
+		}
+		.img-watch {
+			padding: 0;
+			margin: 0;
+			height: 115px;
+		}
+		#live-list {
+			padding: 0;
+			margin: 0;
+		}
+		#live-list ul {
+			padding: 0;
+			margin: 0;
+		}
+		#live-list li {
+			list-style: none;
+			background-image: url("images/live.png");
+			background-repeat: no-repeat;
+			background-position: left center;
+			background-size: 28px;
+			margin: 0 8px 0 8px;
+			padding: 8px 0 8px 35px;
+			font-weight: bold;
+		}
+		#live-list a {
+			color: #1F4F82;
+		}
+		#live-list a:visited {
+			color: #3973ac;
+		}
+		.bb {
+			border-bottom: 1px solid #DDDDDD;
+		}
