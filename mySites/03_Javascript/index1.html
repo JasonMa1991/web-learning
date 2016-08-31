@@ -9,7 +9,9 @@
 	</head>
 
 	<body>
-		<button id="redButton">Big Red Button</button>
+		<button id="textChanger">Change first-p text</button>
+
+		<p id="first-p">This is some text</p>
 
 		<script type="text/javascript">
 			// This is how I can comment in Javascript
@@ -18,8 +20,8 @@
 					as a way to block
 					comment
 			*/
-			document.getElementById("redButton").onclick = function(){
-				alert("Hi!");
+			document.getElementById("textChanger").onclick = function(){
+				document.getElementById("first-p").innerHTML = "This has now been changed!"
 			}
 		</script>
 	</body>
