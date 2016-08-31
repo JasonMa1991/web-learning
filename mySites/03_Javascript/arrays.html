@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Learning Javascript</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<button id="textChanger">Change the text!</button>
+
+		<div id="textDiv">This is some text</div>
+
+		<br /><br /><br />
+
+		<script type="text/javascript">
+			var foods = new Array();
+			foods[0] = "pizza";
+			foods[1] = "chocolate";
+
+			console.log(foods)
+
+			var weather = ["rain", "sunshine", "snow"]
+			weather.push("hail")
+			// weather.splice(1, 1)
+			weather.splice(1, 1, "meatballs")
+			console.log(weather)
+			console.log(weather.length)
+
+			document.getElementById("textChanger").onclick = function(){
+				document.getElementById("textDiv").innerHTML = foods[1];
+			}
+		</script>
+	</body>
+</html>

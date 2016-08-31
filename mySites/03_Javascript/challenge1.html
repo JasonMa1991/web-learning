@@ -37,10 +37,6 @@
 		<p id="test"></p>
 
 		<br /><br /><br />
-		<div class="circle red-background" id="vanishing-button">
-			<span class="vertically-center">Click to Remove<br />This Button</span>
-		</div>
-
 
 		<script type="text/javascript">
 			var buttonVanish = "vanishing-button";
@@ -52,6 +48,10 @@
 				var inputText = document.getElementById("myInput").value;
 				document.getElementById(buttonVanish).innerHTML = '<span class="vertically-center">' + inputText + '</span>';
 			}
+
+			var foods = new Array();
+			foods[0] = "pizza";
+			foods[1] = "chocolate";
 		</script>
 	</body>
 </html>
