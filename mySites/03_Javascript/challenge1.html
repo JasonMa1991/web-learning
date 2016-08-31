@@ -30,15 +30,27 @@
 	</head>
 
 	<body>
+		<input id="myInput" type="text" value="test">
+		<br />
+		<button id="changeText">Change the text on the button!</button>
+
+		<p id="test"></p>
+
+		<br /><br /><br />
 		<div class="circle red-background" id="vanishing-button">
-			<span class="vertically-center">Click to<br />Remove</span>
+			<span class="vertically-center">Click to Remove<br />This Button</span>
 		</div>
 
-		<script type="text/javascript">
-			var buttonID = "vanishing-button";
 
-			document.getElementById(buttonID).onclick = function(){
-				document.getElementById(buttonID).style.display = "none";
+		<script type="text/javascript">
+			var buttonVanish = "vanishing-button";
+			document.getElementById(buttonVanish).onclick = function(){
+				document.getElementById(buttonVanish).style.display = "none";
+			}
+
+			document.getElementById("changeText").onclick = function(){
+				var inputText = document.getElementById("myInput").value;
+				document.getElementById(buttonVanish).innerHTML = '<span class="vertically-center">' + inputText + '</span>';
 			}
 		</script>
 	</body>
