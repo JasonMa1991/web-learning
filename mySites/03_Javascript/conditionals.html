@@ -9,22 +9,28 @@
 	</head>
 
 	<body>
-		<p>What is the weather?</p>
+		<p>How many fingers am I holding up?</p>
 
-		<input id = "weather" />
+		<input id = "answer" />
 
 		<button id="submit">Submit</button>
 
 
 		<script type="text/javascript">
-			document.getElementById('submit').onclick = function() {
-				var inputWeather = document.getElementById('weather').value;
-				
-				if (inputWeather != ""){
-					alert("The weather is " + inputWeather)
+			var x = Math.random();
+			x = Math.floor(6*x);
+
+			document.getElementById("submit").onclick = function(){
+				var guess = document.getElementById('answer').value;
+	
+				if (guess == ""){
+					alert("You haven't put in any guess!")
+				}
+				else if (guess == x){
+					alert("You've guessed correctly! I'm holding up " + x + " fingers!")
 				}
 				else {
-					alert("You have input nothing")
+					alert("I'm not holding up " + guess + " fingers!")
 				}
 			}
 		</script>
