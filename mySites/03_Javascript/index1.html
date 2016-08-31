@@ -10,8 +10,15 @@
 
 	<body>
 		<button id="textChanger">Change first-p text</button>
+		<p id="p-first">This is some text</p>
 
-		<p id="first-p">This is some text</p>
+		<br /><br />
+		<button id="textAppender">Append some text</button>
+		<p id="p-second">This text will be appended to...</p>
+
+		<br /><br />
+		<button id="htmlCreator">Create some html</button>
+		<div id="div-empty"></div>
 
 		<script type="text/javascript">
 			// This is how I can comment in Javascript
@@ -21,7 +28,15 @@
 					comment
 			*/
 			document.getElementById("textChanger").onclick = function(){
-				document.getElementById("first-p").innerHTML = "This has now been changed!"
+				document.getElementById("p-first").innerHTML = "This has now been changed!"
+			}
+
+			document.getElementById("textAppender").onclick = function(){
+				document.getElementById("p-second").innerHTML = document.getElementById("second-p").innerHTML + "<br />some text"
+			}
+
+			document.getElementById("htmlCreator").onclick = function(){
+				document.getElementById("div-empty").innerHTML = "<img src='https://matttroupe.files.wordpress.com/2008/02/89aea-evilcalvinhobbestrans.gif' />"
 			}
 		</script>
 	</body>
