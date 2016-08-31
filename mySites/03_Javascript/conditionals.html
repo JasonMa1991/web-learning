@@ -17,10 +17,10 @@
 
 
 		<script type="text/javascript">
-			var x = Math.random();
-			x = Math.floor(6*x);
-
 			document.getElementById("submit").onclick = function(){
+				var x = Math.random();
+				x = Math.floor(6*x);
+
 				var guess = document.getElementById('answer').value;
 	
 				if (guess == ""){
@@ -30,7 +30,7 @@
 					alert("You've guessed correctly! I'm holding up " + x + " fingers!")
 				}
 				else {
-					alert("I'm not holding up " + guess + " fingers!")
+					alert("You guess wrong, I'm holding up " + x + " fingers!")
 				}
 			}
 		</script>

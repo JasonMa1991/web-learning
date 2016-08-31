@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript Conditionals</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<p id="display"></p>
+
+		<script type="text/javascript">
+			var foods = ["pizza", "burger", "chips"];
+			var len = foods.length;
+			var outputStr = "";
+
+			// for (var i = 0; i < len; i++){
+			// 	outputStr = outputStr + foods[i] + " "
+			// }
+
+			var i = 0
+			while (i < len) {
+				outputStr = outputStr + foods[i] + " ";
+				i++;
+			}
+
+			document.getElementById('display').innerHTML = outputStr
+		</script>
+	</body>
+</html>
