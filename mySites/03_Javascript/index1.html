@@ -6,13 +6,19 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<script type="text/javascript">
-			alert("Page Loaded!")
-		</script>
 	</head>
 
 	<body>
-		<button onclick="alert('Hi')">Click Me!</button>
+		<p id="text">Some Text</p>
+
+		<script type="text/javascript">
+			// This is how I can comment in Javascript
+			/*
+					Or I can do this
+					as a way to block
+					comment
+			*/
+			document.getElementById("text").innerHTML = "Some Other Text";
+		</script>
 	</body>
 </html>
