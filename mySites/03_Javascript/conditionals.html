@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript Conditionals</title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+	</head>
+
+	<body>
+		<p>What is the weather?</p>
+
+		<input id = "weather" />
+
+		<button id="submit">Submit</button>
+
+
+		<script type="text/javascript">
+			document.getElementById('submit').onclick = function() {
+				var inputWeather = document.getElementById('weather').value;
+				
+				if (inputWeather != ""){
+					alert("The weather is " + inputWeather)
+				}
+				else {
+					alert("You have input nothing")
+				}
+			}
+		</script>
+	</body>
+</html>
