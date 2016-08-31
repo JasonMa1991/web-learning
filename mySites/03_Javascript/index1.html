@@ -9,7 +9,7 @@
 	</head>
 
 	<body>
-		<p id="text">Some Text</p>
+		<button id="redButton">Big Red Button</button>
 
 		<script type="text/javascript">
 			// This is how I can comment in Javascript
@@ -18,7 +18,9 @@
 					as a way to block
 					comment
 			*/
-			document.getElementById("text").innerHTML = "Some Other Text";
+			document.getElementById("redButton").onclick = function(){
+				alert("Hi!");
+			}
 		</script>
 	</body>
 </html>
