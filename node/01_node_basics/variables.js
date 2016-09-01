@@ -1,3 +1,8 @@
-var name = "Jason"
+var name = "Tim"
 
-console.log(name);
+if (name === "David" || name === "Ollie") {
+	console.log("Hello, friend!")
+}
+else {
+	console.log("Hello, stranger!")
+}
