@@ -9,24 +9,36 @@
 	</head>
 
 	<body>
-		<p id="display"></p>
+		<p>How many fingers are you holding up?</p>
+		<input id="inNumber">
+		<button id="guess">Guess!</button>
+
+		<p id="output"></p>
 
 		<script type="text/javascript">
-			var foods = ["pizza", "burger", "chips"];
-			var len = foods.length;
-			var outputStr = "";
+			document.getElementById('guess').onclick = function(){
+				var fingers = document.getElementById('inNumber').value
 
-			// for (var i = 0; i < len; i++){
-			// 	outputStr = outputStr + foods[i] + " "
-			// }
+				console.log(fingers)
+				var validInputs = [0,1,2,3,4,5]
 
-			var i = 0
-			while (i < len) {
-				outputStr = outputStr + foods[i] + " ";
-				i++;
+				if (validInputs.indexOf(parseInt(fingers)) == -1){
+					alert("You didn't enter a valid number of fingers!")
+				}
+				else {
+					var counter = 0
+					var keepGuessing = true
+
+					while (keepGuessing) {
+						var guess = Math.floor( Math.random() * 6 );
+						if (guess == fingers) {
+							keepGuessing = false
+						}
+						counter++;
+					}
+					document.getElementById('output').innerHTML = "You held up " + fingers + " fingers. The computer took " + counter + " tries to guess this"
+				}
 			}
-
-			document.getElementById('display').innerHTML = outputStr
 		</script>
 	</body>
 </html>
