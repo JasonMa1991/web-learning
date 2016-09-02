@@ -4,7 +4,7 @@
   "description": "Manage your passwords locally",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node read.js",
     "start": "node app.js"
   },
   "keywords": [
@@ -14,6 +14,7 @@
   "author": "Jason Ma",
   "license": "ISC",
   "dependencies": {
-    "node-persist": "0.0.6"
+    "node-persist": "0.0.6",
+    "yargs": "^5.0.0"
   }
 }
