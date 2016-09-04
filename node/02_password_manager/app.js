@@ -3,29 +3,67 @@ console.log("starting password manager")
 var storage = require("node-persist")
 storage.initSync()
 
-// string: account.name
-// string: account.username
-// string: account.password
+var argv = require('yargs')
+	.command(
+		"create",
+		"Creates an account and stores it",
+		function(yargs) {
+			yargs.options({
+				  name: {
+					  demand: true
+					, alias: 'n'
+					, description: "The name of the account (e.g. facebook)"
+					, type: "string"
+				}
+				, username: {
+					  demand: true
+					, alias: 'u'
+					, description: "The username for the account"
+					, type: "string"
+				}
+				, password: {
+					  demand: true
+					, alias: 'p'
+					, description: "The password for the account"
+					, type: "string"
+				}
+			}).help("help");
+		}
+	)
+	.command(
+		"get",
+		"Greets the user",
+		function(yargs) {
+			yargs.options({
+				  name: {
+					  demand: true
+					, alias: 'n'
+					, description: "The name of the account (e.g. facebook)"
+					, type: "string"
+				}
+			}).help("help");
+		}
+	).help("help")
+	.argv
+
+
 function createAccount(name, username, password) {
-	if (typeof name === "string" && typeof username === "string" && typeof password === "string") {
-		var new_account = {
-			  "name": name
-			, "username": username
-			, "password": password
-		}
-
-		var accounts = storage.getItemSync("accounts")
-		if (typeof accounts === "undefined") {
-			accounts = []
-		}
-
-		accounts.push(new_account)
-
-		return new_account
+	var new_account = {
+		  "name": name
+		, "username": username
+		, "password": password
 	}
-	else {
-		return "Error: inputs are not strings"
+
+	var accounts = storage.getItemSync("accounts")
+	if (typeof accounts === "undefined") {
+		accounts = []
 	}
+
+	accounts.push(new_account)
+
+	storage.setItemSync('accounts',accounts);
+
+	return new_account
 }
 
 function getAccount(account_name) {
@@ -44,6 +82,22 @@ function getAccount(account_name) {
 	}
 }
 
-createAccount("facebook", "Jason", "Pass-you-shall-not")
+var command = argv._[0]
 
-console.log( getAccount("facebook") )
+if (command === "create") {
+	if (typeof argv.name === "string" && typeof argv.username === "string" && typeof argv.password === "string") {
+		createAccount(argv.name, argv.username, argv.password)
+	}
+	else {
+		console.log( "Error: arguments must be strings!" )
+	}
+}
+
+if (command === "get") {
+	if (typeof argv.name === "string") {
+		console.log( getAccount(argv.name) )
+	}
+	else {
+		console.log( "Error: arguments must be strings!" )
+	}
+}
