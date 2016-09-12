@@ -25,14 +25,15 @@ if ( location_obj ) {
 else {
 	console.log("Location was not provided")
 
-	location.get( function (location_obj) {
-		if (location_obj) {
-			weather.get(location_obj.city, function (currentWeather){
-				console.log(currentWeather)
-			})
-		}
-		else {
-			console.log("Unable to guess location")
-		}
-	})
+	location.get
+		.then(
+			function (location) {
+				weather.get(location.city, function (currentWeather){
+					console.log(currentWeather)
+				})
+			}
+			, function (error) {
+				console.log(error)
+			}
+		)
 }
