@@ -1,6 +1,6 @@
 var request = require('request')
 
-module.exports.get = getLocation()
+module.exports.get = getLocation
 
 function getLocation(){
 	return new Promise(function (resolve, reject) {
@@ -13,7 +13,7 @@ function getLocation(){
 				reject("Unable to find current location")
 			}
 			else {
-				resolve(body)
+				resolve(body.city)
 			}
 		})
 	})
