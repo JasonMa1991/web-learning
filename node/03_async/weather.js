@@ -1,6 +1,8 @@
 var request = require("request")
 
-module.exports = function (location, callback){
+module.exports.get = getWeather
+
+function getWeather (location, callback){
 	if (!location){
 		callback("No location provided")
 	}

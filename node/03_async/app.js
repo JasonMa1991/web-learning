@@ -18,16 +18,16 @@ var location_obj = argv.location
 
 if ( location_obj ) {
 	console.log("Location was provided")
-	weather(location_obj, function (currentWeather){
+	weather.get(location_obj, function (currentWeather){
 		console.log(currentWeather)
 	})
 }
 else {
 	console.log("Location was not provided")
 
-	location( function (location_obj) {
+	location.get( function (location_obj) {
 		if (location_obj) {
-			weather(location_obj.city, function (currentWeather){
+			weather.get(location_obj.city, function (currentWeather){
 				console.log(currentWeather)
 			})
 		}

@@ -1,6 +1,8 @@
 var request = require('request')
 
-module.exports = function (callback){
+module.exports.get = getLocation
+
+function getLocation(callback){
 	request({
 		  "url": 'http://ipinfo.io'
 		, "json": true
