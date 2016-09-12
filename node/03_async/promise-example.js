@@ -40,24 +40,29 @@ function getWeather(location) {
 			request({
 				  "url": url
 				, "json": true
-			}, function getJSON(error, response, body) {
-				if (error){
-					reject("Unable to fetch weather.")
-				}
-				else if (body.cod !== 200){
-					reject(body.message)
-				}
-				else {
-					var city = body.name
-					var temp = body.main.temp
-
-					var weather = "It's " + temp + " in " + city
-					resolve(weather)
-				}
-			})
+			}, getJSON)
 		}
+
+		function getJSON(error, response, body) {
+			if (error){
+				reject("Unable to fetch weather.")
+			}
+			else if (body.cod !== 200){
+				reject(body.message)
+			}
+			else {
+				var city = body.name
+				var temp = body.main.temp
+
+				var weather = "It's " + temp + " in " + city
+				resolve(weather)
+			}
+		}
+		
 	})
 }
+
+
 
 // getWeather("").then(
 // getWeather("waaaaaaaytoooo").then(
