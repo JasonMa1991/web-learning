@@ -1,16 +1,17 @@
 var express = require("express")
 var app = express()
-
-
-function displayResult(req, res) {
-	res.send("Hello Express!")
-}
+var port = 3000
 
 function displayAbout(req, res) {
 	res.send("About Us")
 }
 
+function confirmStart(){
+	console.log("Express server started on port " + port + "!")
+}
 
-app.listen(3000)
 app.get("/about", displayAbout)
-app.get("/", displayResult)
+
+app.use(express.static(__dirname + "/public"))
+
+app.listen(port, confirmStart)
