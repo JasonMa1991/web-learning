@@ -10,18 +10,7 @@ function confirmStart(){
 	console.log("Express server started on port " + PORT + "!")
 }
 
-
-var middleware = {
-	requireAuthentication: function (req, res, next) {
-		console.log("private route hit!")
-		next()
-	} ,
-	logger: function (req, res, next) {
-		var current_time = new Date()
-		console.log("Request at " + current_time + ": " + req.method + " " + req.originalUrl)
-		next()
-	}
-}
+var middleware = require("./middleware.js")
 
 app.use(middleware.logger)
 
